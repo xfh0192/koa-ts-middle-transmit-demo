@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        // "allowJs": true,
+        // "checkJs": true,
+        "target": "ES6",
+        "rootDir": "./src",
+        "outDir": "./build",
+        // "watch": true
+    },
+    "include": [
+        "app.ts",
+        "src/*",
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

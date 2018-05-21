@@ -1,0 +1,37 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc && nodemon build/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.45",
+    "@types/koa-router": "^7.0.28",
+    "nodemon": "^1.17.4",
+    "typescript": "^2.8.3"
+  },
+
+  "nodemonConfig": {
+    "verbose": true,
+    "watch": ["src"],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "execMap": {
+      "ts": "tsc"
+    },
+    "events": {
+      "restart": "tsc"
+    },
+    "ext": "js ts"
+  }
+}
