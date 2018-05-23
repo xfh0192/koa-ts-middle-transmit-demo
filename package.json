@@ -19,10 +19,11 @@
     "nodemon": "^1.17.4",
     "typescript": "^2.8.3"
   },
-
   "nodemonConfig": {
-    "verbose": true,
-    "watch": ["src"],
+    "verbose": false,
+    "watch": [
+      "src"
+    ],
     "env": {
       "NODE_ENV": "development"
     },
@@ -30,7 +31,7 @@
       "ts": "tsc"
     },
     "events": {
-      "restart": "tsc"
+      "restart": "tsc && echo \"finish\""
     },
     "ext": "js ts"
   }
