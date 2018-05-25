@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/app.ts",
+    "dev": "npm run watch-server",
     "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/app.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,11 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.5.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "pm2": "^2.10.4"
   },
   "devDependencies": {
     "@types/koa": "^2.0.45",
     "@types/koa-router": "^7.0.28",
+    "@types/koa2-cors": "^2.0.1",
     "nodemon": "^1.17.4",
     "ts-node": "^6.0.3",
     "typescript": "^2.8.3"

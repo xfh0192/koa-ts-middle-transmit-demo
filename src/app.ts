@@ -1,10 +1,13 @@
 // import Koa from 'koa'
 import * as Koa from 'koa'
-import * as Router from 'koa-router'
+import * as Cors from 'koa2-cors'
 import {Server} from 'http'
 
 import router from './router/mobile'
 
 const app: Koa = new Koa()
 
-app.use(router).listen(3000);
+app.use(Cors());
+app.use(router);
+
+app.listen(3000);
