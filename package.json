@@ -5,23 +5,32 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run watch-server",
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/app.ts",
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/app.ts --inspect",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "nodemon --inspect ./src/app.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.5",
-    "pm2": "^2.10.4"
+    "pm2": "^2.10.4",
+    "qs": "^6.5.2",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "@types/koa": "^2.0.45",
+    "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-router": "^7.0.28",
     "@types/koa2-cors": "^2.0.1",
+    "@types/qs": "^6.5.1",
+    "@types/request-promise": "^4.1.41",
     "nodemon": "^1.17.4",
+    "ts-loader": "^4.4.1",
     "ts-node": "^6.0.3",
     "typescript": "^2.8.3"
   },
