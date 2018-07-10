@@ -4,7 +4,8 @@ import { Context } from 'koa';
 import bodyParser from 'koa-bodyparser'
 
 import ApiTestRouter from './api/test'
-import SpecialViewRouter from './mobile/special-view'
+import SpecialRouter from './mobile/special'
+import ArticleRouter from './mobile/article';
 
 export default class BaseRouterClass extends Router {
 
@@ -30,16 +31,18 @@ export default class BaseRouterClass extends Router {
 
         // 分发router
 
-        // mobile页面
-        // mobile/**
-        let specialViewRouter: SpecialViewRouter = new SpecialViewRouter();
-        router.use('/mobile', specialViewRouter.router.routes());
-
         // api部分
         // api/**
         let apiTestRouter: ApiTestRouter = new ApiTestRouter();
         router.use('/api', apiTestRouter.router.routes());
-        
+
+        // mobile页面
+        // mobile/**
+        let specialRouter: SpecialRouter = new SpecialRouter();
+        router.use('/mobile/special', specialRouter.router.routes());
+
+        let articleRouter: ArticleRouter = new ArticleRouter();        
+        router.use('/mobile/article', articleRouter.router.routes());
     }
 
 }

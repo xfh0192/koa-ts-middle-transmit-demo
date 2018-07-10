@@ -6,7 +6,7 @@ import * as fs from 'fs'
 import { Context } from 'koa'
 import { NextFunction } from 'connect'
 
-import MobileSpecialViewController from '../../controller/mobile-special-view'
+import MobileSpecialController from '../../controller/mobile-special'
 
 
 export default class SpecialViewRouter extends Router {
@@ -34,15 +34,7 @@ export default class SpecialViewRouter extends Router {
 
         // 获取html
         // mobile/special-view
-        router.get('/special/view.html', MobileSpecialViewController.init)
-
-        // async (ctx: Context, next: NextFunction) => {
-            
-        //     ctx.status = 200;
-        //     ctx.type = 'html';  // 让浏览器作为html打开
-        //     ctx.body = fs.createReadStream(path.resolve('src/view/mobile/special-view.html'))
-        //     next()
-        // }
+        router.get('/view.html', MobileSpecialController.init)
 
     }
 }

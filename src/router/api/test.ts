@@ -3,7 +3,8 @@ import bodyParser from 'koa-bodyparser'
 
 import rp from 'request-promise'
 
-import MobileSpecialViewController from '../../controller/mobile-special-view'
+import MobileSpecialController from '../../controller/mobile-special'
+import ArticleListController from "../../controller/mobile-article";
 
 export default class ApiTestRouter extends Router {
     
@@ -27,10 +28,7 @@ export default class ApiTestRouter extends Router {
             next()
         })
         
-
-        
         router.post('/special/list', async (ctx, next) => {
-
             let res = {message: 'null'}
 
             console.log(ctx.request.body)
@@ -55,10 +53,8 @@ export default class ApiTestRouter extends Router {
             next()
         })
 
-        router.post('/special/view', MobileSpecialViewController.getSpecialView)
-        // router.post('/special/view', async (ctx) => {
-        //     console.log(ctx.request.body);
-        // })
+        router.post('/special/view', MobileSpecialController.getSpecialViewData)
         
+        router.post('/article/list', ArticleListController.getArticleList);
     }
 }
