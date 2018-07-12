@@ -31,16 +31,22 @@ export default class BaseRouterClass extends Router {
 
         // 分发router
 
-        // api部分
-        // api/**
+        /* 
+        *  api部分
+        *  api/**
+        */
         let apiTestRouter: ApiTestRouter = new ApiTestRouter();
         router.use('/api', apiTestRouter.router.routes());
 
-        // mobile页面
-        // mobile/**
+        /* 
+        *  mobile页面
+        *  mobile/**
+        */
+        // 专题
         let specialRouter: SpecialRouter = new SpecialRouter();
         router.use('/mobile/special', specialRouter.router.routes());
 
+        // 资讯
         let articleRouter: ArticleRouter = new ArticleRouter();        
         router.use('/mobile/article', articleRouter.router.routes());
     }
