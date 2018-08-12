@@ -16,7 +16,7 @@ export default class ArticleListController {
         let rpRes: string;
         let rpResJson;
 
-        try {
+        // try {
             rpRes = await rp({
                 method: 'POST',
                 uri: 'https://testshop.linghit.com/index.php?s=shop&c=ApiArticle&a=articleList',
@@ -38,17 +38,17 @@ export default class ArticleListController {
 
             next();
 
-        } catch(e) {
-            console.log(e)
-            next()
-        }
+        // } catch(e) {
+        //     console.log(e)
+        //     next()
+        // }
     }
 
     public static async getArticleList(ctx: Context, next: NextFunction) {
         let rpRes;
         let rpResJson;
 
-        try {
+        // try {
             rpRes = await rp({
                 method: 'POST',
                 uri: 'http://testshop.linghit.com/index.php?s=shop&c=ApiArticle&a=articleList',
@@ -65,9 +65,9 @@ export default class ArticleListController {
             ctx.body = rpRes
             next()
 
-        } catch(e) {
-            console.log(e)
-            next()
-        }
+        // } catch(e) {
+        //     console.log(e)
+        //     next()
+        // }
     }
 }

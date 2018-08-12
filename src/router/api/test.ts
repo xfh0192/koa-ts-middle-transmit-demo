@@ -19,15 +19,22 @@ export default class ApiTestRouter extends Router {
     protected init() {
 
         let router: Router = this.router;
-
         router.use(bodyParser());
 
+        // 测试部分
         router.get('/test', async (ctx, next) => {
             ctx.status = 200;
             ctx.body = 'this is api/test'
             next()
         })
+
+        // 测试抛出错误记录日志
+        router.get('/test/error', async (ctx, next) => {
+            throw new Error('抛出错误');
+            
+        })
         
+        // special
         router.post('/special/list', async (ctx, next) => {
             let res = {message: 'null'}
 
@@ -55,6 +62,7 @@ export default class ApiTestRouter extends Router {
 
         router.post('/special/view', MobileSpecialController.getSpecialViewData)
         
+        // article
         router.post('/article/list', ArticleListController.getArticleList);
     }
 }

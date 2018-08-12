@@ -23,7 +23,7 @@ export default class MobileSpecialController {
         let rpRes:string = '';
         let rpResJson;
         
-        try {
+        // try {
             rpRes = await rp({
                 method: 'POST',
                 // json: true,
@@ -34,9 +34,9 @@ export default class MobileSpecialController {
                 uri: 'https://testshop.linghit.com/index.php?s=shop&c=special&a=shopSpecialDetail'
             })
 
-        } catch(e) {
-            console.log(e)
-        }
+        // } catch(e) {
+        //     console.log(e)
+        // }
 
         // console.log(JSON.parse(rpRes))
         rpResJson = JSON.parse(rpRes);
@@ -58,7 +58,7 @@ export default class MobileSpecialController {
         let req = ctx.request;
         let rpRes:string = '';
 
-        try {
+        // try {
             rpRes = await rp({
                 method: 'POST',
                 // json: true,
@@ -69,9 +69,9 @@ export default class MobileSpecialController {
                 uri: 'https://testshop.linghit.com/index.php?s=shop&c=special&a=shopSpecialDetail'
             })
 
-        } catch(e) {
-            console.log(e)
-        }
+        // } catch(e) {
+        //     console.log(e)
+        // }
 
         // console.log(JSON.parse(rpRes))
 
