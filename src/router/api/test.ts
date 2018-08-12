@@ -25,7 +25,6 @@ export default class ApiTestRouter extends Router {
         router.get('/test', async (ctx, next) => {
             ctx.status = 200;
             ctx.body = 'this is api/test'
-            next()
         })
 
         // 测试抛出错误记录日志
