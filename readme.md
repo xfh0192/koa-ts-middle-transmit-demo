@@ -32,3 +32,7 @@ https://github.com/zhongsp/TypeScript/blob/master/doc/handbook/tsconfig.json.md
 ## 说明
 1. 用ts的话，需要添加类型映射。npm install --save-dev @types/koa...
 2. src/stash/ 中是一些测试ts语法的文件。。可无视
+3. ts中，命名空间是项目（包）内部用的，定义好即在项目内可使用；而模块，则是用于作为包的输出口的，使用需要import，声明文件中也是同理，declare module 'jquery'这样
+
+## mongoose
+1. https://cn.mongoosedoc.top/docs/guide.html

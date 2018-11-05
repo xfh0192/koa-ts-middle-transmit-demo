@@ -6,6 +6,7 @@ import bodyParser from 'koa-bodyparser'
 import ApiTestRouter from './api/test'
 import SpecialRouter from './mobile/special'
 import ArticleRouter from './mobile/article';
+import NoteRouter from './api/note';
 
 export default class BaseRouterClass extends Router {
 
@@ -36,7 +37,10 @@ export default class BaseRouterClass extends Router {
         *  api/**
         */
         let apiTestRouter: ApiTestRouter = new ApiTestRouter();
-        router.use('/api', apiTestRouter.router.routes());
+        router.use('/api/test', apiTestRouter.router.routes());
+
+        let noteRouter: NoteRouter = new NoteRouter();
+        router.use('/api/note', noteRouter.router.routes());
 
         /* 
         *  mobile页面

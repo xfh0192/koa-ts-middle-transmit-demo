@@ -1,13 +1,10 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import * as qs from 'qs'
 
 import rp from 'request-promise'
 
 import {Context} from 'koa'
 import {NextFunction} from 'connect'
-import { Stream } from 'stream';
-
 
 export default class MobileSpecialController {
 
