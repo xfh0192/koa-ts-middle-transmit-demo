@@ -1,0 +1,1 @@
+{"version":3,"file":"Admin.js","sourceRoot":"","sources":["../../../src/schema/Admin.ts"],"names":[],"mappings":";;AAAa,QAAA,WAAW,GAAG;IACvB,EAAE,EAAE;QACA,IAAI,EAAE,MAAM;QACZ,KAAK,EAAE,IAAI;QACX,MAAM,EAAE,IAAI;KACf;IACD,OAAO,EAAE,MAAM;IACf,QAAQ,EAAE,MAAM;CACnB,CAAA"}

@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run watch-server",
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/app.ts --inspect",
+    "watch-server": "nodemon --watch './src/**/*' -e ts,tsx --exec 'ts-node' ./src/app.ts --inspect",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon --inspect ./src/app.ts"
+    "debug": "nodemon --inspect ./src/app.js"
   },
   "author": "",
   "license": "ISC",

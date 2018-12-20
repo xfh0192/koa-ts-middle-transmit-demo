@@ -19,7 +19,10 @@ export default class NoteRouter extends Router {
         let router = this.router;
 
         // 新增一条note
-        router.get('/add', NoteController.add)
+        router.post('/add', NoteController.add)
+
+        // 获取一条/所有note
+        router.get('/get', NoteController.get)
 
         // 更新一条note
         router.post('/update', NoteController.update)

@@ -1,0 +1,1 @@
+export const testHost:string = 'http://www.test.com/';

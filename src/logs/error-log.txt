@@ -1,11 +1,4 @@
-[2018-08-13 01:15:09]: 抛出错误[2018-08-13 01:16:13]: 抛出错误[2018-08-13 01:16:14]: 抛出错误[2018-08-13 01:16:14]: 抛出错误[2018-08-13 01:16:56]: 抛出错误
-[2018-08-13 01:16:57]: 抛出错误
-[2018-08-13 01:17:01]: 抛出错误
-[2018-08-13 01:17:02]: 抛出错误
-[2018-11-03 16:24:28]: index_1.default.create is not a function
-[2018-11-03 16:25:28]: index_1.default.create is not a function
-[2018-11-03 16:25:48]: index_1.default.create is not a function
-[2018-11-03 16:27:01]: index_1.default.create is not a function
-[2018-11-03 16:27:57]: index_1.default.create is not a function
-[2018-11-03 16:28:29]: index_1.default.create is not a function
-[2018-11-03 16:29:03]: index_1.default.create is not a function
+[2018-11-27 18:14:49]: CastError: Cast to ObjectId failed for value "DD1543313237903" at path "_id" for model "Order"
+[2018-11-27 18:15:18]: CastError: Cast to ObjectId failed for value "DD1543313237903" at path "_id" for model "Order"
+[2018-11-27 18:29:05]: MongoError: E11000 duplicate key error collection: test.orders index: id_1 dup key: { : "23" }
+[2018-11-27 20:13:22]: MongoError: E11000 duplicate key error collection: test.admins index: id_1 dup key: { : 1 }

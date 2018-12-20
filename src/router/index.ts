@@ -7,6 +7,10 @@ import ApiTestRouter from './api/test'
 import SpecialRouter from './mobile/special'
 import ArticleRouter from './mobile/article';
 import NoteRouter from './api/note';
+import ListRouter from './api/list';
+import ProductRouter from './api/product';
+import OrderRouter from './api/order';
+import AdminRouter from './api/admin';
 
 export default class BaseRouterClass extends Router {
 
@@ -42,6 +46,21 @@ export default class BaseRouterClass extends Router {
         let noteRouter: NoteRouter = new NoteRouter();
         router.use('/api/note', noteRouter.router.routes());
 
+        let listRouter: ListRouter = new ListRouter();
+        router.use('/api/list', listRouter.router.routes());
+
+        let productRouter: ProductRouter = new ProductRouter();
+        router.use('/api/product', productRouter.router.routes());
+
+        let orderRouter: OrderRouter = new OrderRouter();
+        router.use('/api/order', orderRouter.router.routes());
+        
+        /**
+         * admin部分
+         */
+        let adminRouter: AdminRouter = new AdminRouter();
+        router.use('/api/admin', adminRouter.router.routes());
+
         /* 
         *  mobile页面
         *  mobile/**
@@ -53,6 +72,7 @@ export default class BaseRouterClass extends Router {
         // 资讯
         let articleRouter: ArticleRouter = new ArticleRouter();        
         router.use('/mobile/article', articleRouter.router.routes());
+
     }
 
 }

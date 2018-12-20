@@ -39,11 +39,23 @@ import mongoose from 'mongoose'
 mongoose.connect('mongodb://localhost:27017/test')
 const connection = mongoose.connection;
 connection.on('error', () => {
-    console.log('数据库连接失败')
+    console.log('数据库连接失败!!')
 })
 connection.once('open', () => {
-    console.log('数据库连接成功')
+    console.log('数据库连接成功!')
 })
+
+// let schema = mongoose.Schema;
+// let NoteSchema = new schema({
+//     title: String
+// })
+
+// let model = mongoose.model('note', NoteSchema);
+
+// model.create({title: 'hihihi111'}, () => {
+//     console.log('done')
+// })
+
 
 app.listen(4000);
 
